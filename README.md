@@ -65,11 +65,11 @@ If this repo is cloned, it should have the above directory structure. However `a
 
 ### Usage
 To run the `script_BLE.py` script, use the following syntax:
-```bash
+```console
 foo@bar:~/Scripts/$ python BLE_Perm.py ../csv/<csv file to run on> 
 ```
 
 To run the `condensed_apk_analyzer.py` script, use the following syntax:
-```bash
+```console
 foo@bar:~/Scripts/$ python condensed_apk_analyzer.py
 ```
