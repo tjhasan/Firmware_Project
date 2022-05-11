@@ -123,7 +123,7 @@ Nordic_Insecure_Flag_List = open("../Labels/Nordic_Insecure_Flag_List.txt", "a")
 
 # Go through the entire directory and keep track of how many apks have been analyzed. This is to 
 # help keep track of how many rows to remove from the .csv file.
-directory = [apk for apk in os.listdir('.')]
+directory = [apk for apk in os.listdir('../BLE_Perm/')]
 directory.sort()
 counter = 0
 
