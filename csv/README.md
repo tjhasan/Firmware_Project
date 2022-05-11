@@ -10,3 +10,13 @@ More details on each of the columns can be found in the [AndroZoo website](https
 
 For the purposes of our analysis, we simply need the first column of each row: `sha256`. This allows us to download that apk using our api key which can be seen in the `script_BLE.py`. 
 
+## Cutting CSV File
+
+There may come times when the script needs to be stopped for some reason. It would be a waste of time to go back through SHA values that we have already analyzed. This is why `script_BLE.py` keeps track of a Counter variable and prints it to the screen. Once the script stops running, use the latest number printed in the following command:
+
+```console
+foo@bar:~/csv/$  sed -i '1,[x]d' part_[y]
+```
+
+x = The latest number printed to the screen before the script stopped.
+y = [1 - 4] indicating which part to modify.
