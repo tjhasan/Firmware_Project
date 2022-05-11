@@ -19,4 +19,5 @@ foo@bar:~/csv/$  sed -i '1,[x]d' part_[y]
 ```
 
 x = The latest number printed to the screen before the script stopped.
+
 y = [1 - 4] indicating which part to modify.
