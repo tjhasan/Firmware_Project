@@ -115,11 +115,11 @@ def NordicInsecureFlag(decoded_apk):
 
 
 # Open all of the text files to keep track of our labelling.
-Nordic_Insecure_Image_List = open("./Nordic_Insecure_Image_List.txt", "a")
-Nordic_Secure_Image_List = open("./Nordic_Secure_Image_List.txt", "a")
-Nordic_Lib_List = open("./Nordic_Lib_List.txt", "a")
-Nordic_DFU_Lib_List = open("./Nordic_DFU_Lib_List.txt", "a")
-Nordic_Insecure_Flag_List = open("./Nordic_Insecure_Flag_List.txt", "a")
+Nordic_Insecure_Image_List = open("../Labels/Nordic_Insecure_Image_List.txt", "a")
+Nordic_Secure_Image_List = open("../Labels/Nordic_Secure_Image_List.txt", "a")
+Nordic_Lib_List = open("../Labels/Nordic_Lib_List.txt", "a")
+Nordic_DFU_Lib_List = open("../Labels/Nordic_DFU_Lib_List.txt", "a")
+Nordic_Insecure_Flag_List = open("../Labels/Nordic_Insecure_Flag_List.txt", "a")
 
 # Go through the entire directory and keep track of how many apks have been analyzed. This is to 
 # help keep track of how many rows to remove from the .csv file.
