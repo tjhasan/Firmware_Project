@@ -43,7 +43,7 @@ for row in csv_reader:
     try:
         sleep(0.5)
         os.system(
-            "curl -O --remote-header-name -G -d apikey=90278ae7fc566fa4015fc69fcd5a9860ebf561ba5de3e258ea4dbfad95666afa -d sha256="
+            "curl -O --remote-header-name -G -d apikey=["API KEY GOES HERE"] -d sha256="
             + sha + " https://androzoo.uni.lu/api/download")
     except Exception:
         # The curl command doesn't return an exception so we need to check for curl errors later in the code.
