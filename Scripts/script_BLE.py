@@ -12,7 +12,7 @@ from time import sleep
 # 5) if BLE permission is found move the apk to "./BLE_Perm/.apk"
 # 6) Set BLE var to False
 
-BLE_Perm = "./BLE_Perm/"
+BLE_Perm = "../BLE_Perm/"
 Temp = "./Temp/"
 Counter = 0
 Bluetooth = False
@@ -67,7 +67,7 @@ for row in csv_reader:
         # simply remove the files related to it and add it to the skipped text file to check later.
         print("Curl error, skipping...")
         os.system("rm -rf ./" + zip)
-        os.system("rm -rf ./Temp/" + apk)
+        os.system("rm -rf " + Temp + apk)
         skip.write(sha + "\n")
         Counter += 1
         print("COMPLETED: ", Counter)
@@ -87,7 +87,7 @@ for row in csv_reader:
     # If the bluetooth permission doesn't exist then remove all of the related files and go to the next hash value
     if Bluetooth is False:
         print("Permission not found, skipping...")
-        os.system("rm -rf ./Temp/" + apk)
+        os.system("rm -rf "+ Temp + apk)
         os.system("rm -rf ./" + xml)
         os.system("rm -rf ./" + zip)
         os.system("rm -rf ./" + sha)
@@ -98,7 +98,7 @@ for row in csv_reader:
     else:
         Bluetooth = False
         print("Sending discovered Bluetooth apk to BLE_Perm Directory")
-        os.system("mv ./Temp/" + apk + " " + BLE_Perm)
+        os.system("mv " + Temp + apk + " " + BLE_Perm)
         os.system("rm -rf ./" + xml)
         os.system("rm -rf ./" + sha)
         os.system("rm -rf ./" + zip)
