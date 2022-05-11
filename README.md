@@ -59,5 +59,17 @@ Before running any of the scripts, ensure that you have the following directory 
 │
 └───jadx/
     │   ...
+```
+Note that if BLE_Perm or Temp don't exist, they will be created when the `script_BLE.py` script is run.
+If this repo is cloned, it should have the above directory structure. However `axmldec` and `jadx` will need to be installed personally.
 
+### Usage
+To run the `script_BLE.py` script, use the following syntax:
+```bash
+foo@bar:~/Scripts/$ python BLE_Perm.py ../csv/<csv file to run on> 
+```
+
+To run the `condensed_apk_analyzer.py` script, use the following syntax:
+```bash
+foo@bar:~/Scripts/$ python condensed_apk_analyzer.py
 ```
