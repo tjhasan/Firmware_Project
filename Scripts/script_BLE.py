@@ -58,7 +58,7 @@ for row in csv_reader:
     os.system("unzip -q " + zip + " -d " + sha)
 
     # Decode the .xml file.
-    os.system("./axmldec/axmldec -o " + xml + " -i " + sha + "/AndroidManifest.xml")
+    os.system("~/axmldec/axmldec -o " + xml + " -i " + sha + "/AndroidManifest.xml")
 
     try:
         xmldoc = minidom.parse("./" + xml)
